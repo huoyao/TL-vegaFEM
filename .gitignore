@@ -26,3 +26,8 @@
 *.exe
 *.out
 *.app
+/vegafem/performance
+/vegafem/vegafem/Debug
+/vegafem/vegafem/x64
+*.sdf
+*.opensdf

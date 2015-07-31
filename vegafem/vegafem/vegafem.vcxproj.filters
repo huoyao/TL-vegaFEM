@@ -1,0 +1,1096 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="need">
+      <UniqueIdentifier>{25a672ff-9f1e-47cc-a160-3c2d13b3e4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="no">
+      <UniqueIdentifier>{8639bd5d-41c5-4cfa-950e-5a035984a965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="conf">
+      <UniqueIdentifier>{db8c9131-e40c-4171-88e8-814deb3ff4b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="orignal">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="initGraphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interactiveDeformableSimulator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="computeStiffnessMatrixNullspace.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="configFile.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="corotationalLinearFEMMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="cubicMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="cubicMeshIntegrals.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="eulerSparse.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="generateInterpolationMatrix.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="generateMassMatrix.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="generateMeshGraph.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="generateSurfaceMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="getIntegratorSolver.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="getopts.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="glslPhong.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="hashTable.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="homogeneousMooneyRivlinIsotropicMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="homogeneousNeoHookeanIsotropicMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="homogeneousStVKIsotropicMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="imageIO.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="implicitBackwardEulerDense.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="implicitNewmarkDense.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="implicitNewmarkDenseMulti1D.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="insertRows.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="integratorBaseDense.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="integratorMulti1D.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="interpolationWeightsMultiLoad.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="invMKSolver.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="isotropicHyperelasticFEMMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="lighting.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="linearFEMForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="loadList.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystem.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemFromCubicMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemFromCubicMeshConfigFile.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemFromObjMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemFromObjMeshConfigFile.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemFromTetMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemFromTetMeshConfigFile.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="massSpringSystemMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixBLAS.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixBLASOptimized.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixBLASVanilla.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixExp.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixIO.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixLAPACK.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixPCA.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="matrixProjection.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="modalMatrix.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="MooneyRivlinIsotropicMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="multiMatrixIO.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="neoHookeanIsotropicMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshBinaryLoader.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshClose.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMesh-disjointSet.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshEncode.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGraph.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshOctree.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshOffsetVoxels.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshOrientable.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshRender.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="octree.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="openGLHelper.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="PardisoSolver.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="performanceCounter.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="polarDecomposition.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="polarDecompositionGradient.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="ppm.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="printBitmap.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="quaternion.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedForceModelWithHessian.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedLinearForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedLinearStVKForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedMassSpringSystemForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedMassSpringSystemForceModelWithHessian.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedSpringForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedStVKForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedStVKForceModelWithHessian.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="reducedSubspaceStVKForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="renderSprings.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="renderVolumetricMesh.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="rigidBody.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="rigidBody_generalTensor.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="saveScreenShot.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObject.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObject6DOF.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectDeformable.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectDeformable6DOF.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectDeformableGPU.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectDeformableGPU6DOF.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectReduced.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectReduced6DOF.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectReducedCPU.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectReducedCPU6DOF.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectReducedGPU.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectReducedGPU6DOF.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneObjectWithRestPosition.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="simpleSphere.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="sparseMatrixMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOOLESSolver.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="SPOOLESSolverMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKCubeABCD.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKElementABCD.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKElementABCDLoader.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKForceModel.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKHessianTensor.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKInternalForces.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKInternalForcesMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKReducedInternalForces.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKReducedInternalForcesMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKReducedInternalForcesMultiLoad.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKReducedStiffnessMatrix.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKStiffnessMatrix.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKStiffnessMatrixMT.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKTetABCD.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKTetHighMemoryABCD.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="triangle.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="tribox3.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="uUq-shaders.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="vbo.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshDeformationGradient.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshENuMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshExtensions.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshLoader.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshMooneyRivlinMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshOrthotropicMaterial.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMeshParser.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer_coarseToFine_fbo.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer_coarseToFine.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer_uUq_pbuffer.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer_uUq.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer_uUq_fbo.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="objMeshGPUDeformer_uUq_setLighting.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="integratorBase.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="integratorBaseSparse.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="forceModel.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="isotropicHyperelasticFEMForceModel.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="isotropicHyperelasticFEM.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="boundingBox.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="centralDifferencesDense.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="centralDifferencesSparse.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="clothBW.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="clothBWForceModel.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="clothBWFromObjMesh.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="clothBWMT.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="coarseToFine-shaders.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="implicitBackwardEulerSparse.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="implicitNewmarkSparse.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="CGSolver.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="tetMesh.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="volumetricMesh.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="vec2d.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="vec3d.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="mat3d.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="corotationalLinearFEMForceModel.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="corotationalLinearFEM.cpp">
+      <Filter>no</Filter>
+    </ClCompile>
+    <ClCompile Include="isotropicMaterialWithCompressionResistance.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="isotropicMaterial.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKReducedHessianTensor.cpp">
+      <Filter>orignal</Filter>
+    </ClCompile>
+    <ClCompile Include="StVKIsotropicMaterial.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="eig3.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="sparseMatrix.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+    <ClCompile Include="linearSolver.cpp">
+      <Filter>need</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="computeStiffnessMatrixNullspace.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="configFile.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="corotationalLinearFEMMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="cubicMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="eulerSparse.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="expokit_xgpadm.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="generateInterpolationMatrix.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="generateMassMatrix.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="generateMeshGraph.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="generateSurfaceMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="getIntegratorSolver.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="getopts.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="glh_extensions.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="glh_genext.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="glslPhong.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="glui.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="glut-header.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="graph.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="hashTable.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="homogeneousMooneyRivlinIsotropicMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="homogeneousNeoHookeanIsotropicMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="homogeneousStVKIsotropicMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="imageFormats.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="imageIO.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="implicitBackwardEulerDense.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="implicitNewmarkDense.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="implicitNewmarkDenseMulti1D.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="insertRows.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="integratorBaseDense.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="integratorMulti1D.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="integratorSolverSelection.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="interpolationWeightsMultiLoad.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="invMKSolver.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="IPIVC.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="isotropicHyperelasticFEMMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="lapack-headers.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="lighting.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="linearFEMForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="loadList.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystem.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemFromCubicMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemFromCubicMeshConfigFile.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemFromObjMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemFromObjMeshConfigFile.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemFromTetMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemFromTetMeshConfigFile.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="massSpringSystemMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixBLAS.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixExp.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixIO.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixLAPACK.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixMacros.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixMultiplyMacros.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixPCA.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="matrixProjection.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="modalMatrix.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="MooneyRivlinIsotropicMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="multiMatrixIO.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="neoHookeanIsotropicMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshBinaryLoader.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshClose.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMesh-disjointSet.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshEncode.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGraph.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshOctree.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshOffsetVoxels.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshOrientable.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshRender.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="octree.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="openGL-headers.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="openGLHelper.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="PardisoSolver.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="performanceCounter.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="polarDecomposition.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="polarDecompositionGradient.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="ppm.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="printBitmap.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="quaternion.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedForceModelWithHessian.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedLinearForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedLinearStVKForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedMassSpringSystemForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedMassSpringSystemForceModelWithHessian.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedSpringForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedStVKForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedStVKForceModelWithHessian.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="reducedSubspaceStVKForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="renderSprings.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="renderVolumetricMesh.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="rigidBody.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="rigidBody_generalTensor.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="saveScreenShot.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObject.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObject6DOF.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectDeformable.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectDeformable6DOF.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectDeformableGPU.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectDeformableGPU6DOF.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectReduced.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectReduced6DOF.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectReducedCPU.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectReducedCPU6DOF.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectReducedGPU.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectReducedGPU6DOF.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneObjectWithRestPosition.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="simpleSphere.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sparseMatrixMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sparseSolverAvailability.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="sparseSolvers.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="SPOOLESSolver.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="SPOOLESSolverMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKCubeABCD.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKElementABCD.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKElementABCDLoader.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKForceModel.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKHessianTensor.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKInternalForces.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKInternalForcesMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKReducedHessianTensor.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKReducedInternalForces.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKReducedInternalForcesMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKReducedInternalForcesMultiLoad.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKReducedStiffnessMatrix.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKStiffnessMatrix.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKStiffnessMatrixMT.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKTetABCD.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKTetHighMemoryABCD.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="triangle.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="tribox3.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="triple.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="vbo.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="vegalong.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshDeformationGradient.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshENuMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshExtensions.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshLoader.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshMooneyRivlinMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshOrthotropicMaterial.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMeshParser.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer_coarseToFine_fbo.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer_coarseToFine.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer_uUq_pbuffer.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer_uUq.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer_uUq_fbo.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="objMeshGPUDeformer_uUq_setLighting.h">
+      <Filter>orignal</Filter>
+    </ClInclude>
+    <ClInclude Include="integratorBase.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="integratorBaseSparse.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="forceModel.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="isotropicHyperelasticFEMForceModel.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="isotropicHyperelasticFEM.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="centralDifferencesDense.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="centralDifferencesSparse.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="clothBW.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="clothBWForceModel.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="clothBWFromObjMesh.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="clothBWMT.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="implicitBackwardEulerSparse.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="implicitNewmarkSparse.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="CGSolver.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="tetMesh.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="volumetricMesh.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="minivector.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="vec2d.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="vec3d.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="mat3d.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="initGraphics.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="boundingBox.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="corotationalLinearFEMForceModel.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="corotationalLinearFEM.h">
+      <Filter>no</Filter>
+    </ClInclude>
+    <ClInclude Include="StVKIsotropicMaterial.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="isotropicMaterialWithCompressionResistance.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="isotropicMaterial.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="eig3.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="sparseMatrix.h">
+      <Filter>need</Filter>
+    </ClInclude>
+    <ClInclude Include="linearSolver.h">
+      <Filter>need</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="homogeneousMooneyRivlinIsotropicMaterial.o">
+      <Filter>orignal</Filter>
+    </None>
+    <None Include="homogeneousNeoHookeanIsotropicMaterial.o">
+      <Filter>orignal</Filter>
+    </None>
+    <None Include="homogeneousStVKIsotropicMaterial.o">
+      <Filter>orignal</Filter>
+    </None>
+    <None Include="..\..\examples\turtle\turtle.config">
+      <Filter>conf</Filter>
+    </None>
+  </ItemGroup>
+</Project>

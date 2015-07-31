@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C14FC4ED-E3BF-4E0B-9B29-8DA69E4385A7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>vegafem</RootNamespace>
+    <CudaToolkitCustomDir>$(CUDA_PATH_V6_5)</CudaToolkitCustomDir>
+    <ProjectName>vegafem_CPU</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\common.props" />
+    <Import Project="props\vegafem_debug32_vs13.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\common.props" />
+    <Import Project="props\vegafem_debug64_vs13.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\common.props" />
+    <Import Project="props\vegafem_release32_vs13.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="props\common.props" />
+    <Import Project="props\vegafem_release64_vs13.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <CudaCompile>
+      <CodeGeneration>compute_20,sm_20</CodeGeneration>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="boundingBox.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="centralDifferencesDense.cpp" />
+    <ClCompile Include="centralDifferencesSparse.cpp" />
+    <ClCompile Include="CGSolver.cpp" />
+    <ClCompile Include="clothBW.cpp" />
+    <ClCompile Include="clothBWForceModel.cpp" />
+    <ClCompile Include="clothBWFromObjMesh.cpp" />
+    <ClCompile Include="clothBWMT.cpp" />
+    <ClCompile Include="coarseToFine-shaders.cpp" />
+    <ClCompile Include="computeStiffnessMatrixNullspace.cpp" />
+    <ClCompile Include="configFile.cpp" />
+    <ClCompile Include="corotationalLinearFEM.cpp" />
+    <ClCompile Include="corotationalLinearFEMForceModel.cpp" />
+    <ClCompile Include="corotationalLinearFEMMT.cpp" />
+    <ClCompile Include="cubicMesh.cpp" />
+    <ClCompile Include="cubicMeshIntegrals.cpp" />
+    <ClCompile Include="eig3.cpp" />
+    <ClCompile Include="eulerSparse.cpp" />
+    <ClCompile Include="forceModel.cpp" />
+    <ClCompile Include="generateInterpolationMatrix.cpp" />
+    <ClCompile Include="generateMassMatrix.cpp" />
+    <ClCompile Include="generateMeshGraph.cpp" />
+    <ClCompile Include="generateSurfaceMesh.cpp" />
+    <ClCompile Include="getIntegratorSolver.cpp" />
+    <ClCompile Include="getopts.cpp" />
+    <ClCompile Include="glslPhong.cpp" />
+    <ClCompile Include="graph.cpp" />
+    <ClCompile Include="hashTable.cpp" />
+    <ClCompile Include="homogeneousMooneyRivlinIsotropicMaterial.cpp" />
+    <ClCompile Include="homogeneousNeoHookeanIsotropicMaterial.cpp" />
+    <ClCompile Include="homogeneousStVKIsotropicMaterial.cpp" />
+    <ClCompile Include="imageIO.cpp" />
+    <ClCompile Include="implicitBackwardEulerDense.cpp" />
+    <ClCompile Include="implicitBackwardEulerSparse.cpp" />
+    <ClCompile Include="implicitNewmarkDense.cpp" />
+    <ClCompile Include="implicitNewmarkDenseMulti1D.cpp" />
+    <ClCompile Include="implicitNewmarkSparse.cpp" />
+    <ClCompile Include="initGraphics.cpp" />
+    <ClCompile Include="insertRows.cpp" />
+    <ClCompile Include="integratorBase.cpp" />
+    <ClCompile Include="integratorBaseDense.cpp" />
+    <ClCompile Include="integratorBaseSparse.cpp" />
+    <ClCompile Include="integratorMulti1D.cpp" />
+    <ClCompile Include="interactiveDeformableSimulator.cpp" />
+    <ClCompile Include="interpolationWeightsMultiLoad.cpp" />
+    <ClCompile Include="invMKSolver.cpp" />
+    <ClCompile Include="isotropicHyperelasticFEM.cpp" />
+    <ClCompile Include="isotropicHyperelasticFEMForceModel.cpp" />
+    <ClCompile Include="isotropicHyperelasticFEMMT.cpp" />
+    <ClCompile Include="isotropicMaterial.cpp" />
+    <ClCompile Include="isotropicMaterialWithCompressionResistance.cpp" />
+    <ClCompile Include="lighting.cpp" />
+    <ClCompile Include="linearFEMForceModel.cpp" />
+    <ClCompile Include="linearSolver.cpp" />
+    <ClCompile Include="loadList.cpp" />
+    <ClCompile Include="massSpringSystem.cpp" />
+    <ClCompile Include="massSpringSystemForceModel.cpp" />
+    <ClCompile Include="massSpringSystemFromCubicMesh.cpp" />
+    <ClCompile Include="massSpringSystemFromCubicMeshConfigFile.cpp" />
+    <ClCompile Include="massSpringSystemFromObjMesh.cpp" />
+    <ClCompile Include="massSpringSystemFromObjMeshConfigFile.cpp" />
+    <ClCompile Include="massSpringSystemFromTetMesh.cpp" />
+    <ClCompile Include="massSpringSystemFromTetMeshConfigFile.cpp" />
+    <ClCompile Include="massSpringSystemMT.cpp" />
+    <ClCompile Include="mat3d.cpp" />
+    <ClCompile Include="matrix.cpp" />
+    <ClCompile Include="matrixBLAS.cpp" />
+    <ClCompile Include="matrixBLASOptimized.cpp" />
+    <ClCompile Include="matrixBLASVanilla.cpp" />
+    <ClCompile Include="matrixExp.cpp" />
+    <ClCompile Include="matrixIO.cpp" />
+    <ClCompile Include="matrixLAPACK.cpp" />
+    <ClCompile Include="matrixPCA.cpp" />
+    <ClCompile Include="matrixProjection.cpp" />
+    <ClCompile Include="modalMatrix.cpp" />
+    <ClCompile Include="MooneyRivlinIsotropicMaterial.cpp" />
+    <ClCompile Include="multiMatrixIO.cpp" />
+    <ClCompile Include="neoHookeanIsotropicMaterial.cpp" />
+    <ClCompile Include="objMesh-disjointSet.cpp" />
+    <ClCompile Include="objMesh.cpp" />
+    <ClCompile Include="objMeshBinaryLoader.cpp" />
+    <ClCompile Include="objMeshClose.cpp" />
+    <ClCompile Include="objMeshEncode.cpp" />
+    <ClCompile Include="objMeshGPUDeformer.cpp" />
+    <ClCompile Include="objMeshGPUDeformer_coarseToFine.cpp" />
+    <ClCompile Include="objMeshGPUDeformer_coarseToFine_fbo.cpp" />
+    <ClCompile Include="objMeshGPUDeformer_uUq.cpp" />
+    <ClCompile Include="objMeshGPUDeformer_uUq_fbo.cpp" />
+    <ClCompile Include="objMeshGPUDeformer_uUq_pbuffer.cpp" />
+    <ClCompile Include="objMeshGPUDeformer_uUq_setLighting.cpp" />
+    <ClCompile Include="objMeshGraph.cpp" />
+    <ClCompile Include="objMeshOctree.cpp" />
+    <ClCompile Include="objMeshOffsetVoxels.cpp" />
+    <ClCompile Include="objMeshOrientable.cpp" />
+    <ClCompile Include="objMeshRender.cpp" />
+    <ClCompile Include="octree.cpp" />
+    <ClCompile Include="openGLHelper.cpp" />
+    <ClCompile Include="PardisoSolver.cpp" />
+    <ClCompile Include="performanceCounter.cpp" />
+    <ClCompile Include="polarDecomposition.cpp" />
+    <ClCompile Include="polarDecompositionGradient.cpp" />
+    <ClCompile Include="ppm.cpp" />
+    <ClCompile Include="printBitmap.cpp" />
+    <ClCompile Include="quaternion.cpp" />
+    <ClCompile Include="reducedForceModel.cpp" />
+    <ClCompile Include="reducedForceModelWithHessian.cpp" />
+    <ClCompile Include="reducedLinearForceModel.cpp" />
+    <ClCompile Include="reducedLinearStVKForceModel.cpp" />
+    <ClCompile Include="reducedMassSpringSystemForceModel.cpp" />
+    <ClCompile Include="reducedMassSpringSystemForceModelWithHessian.cpp" />
+    <ClCompile Include="reducedSpringForceModel.cpp" />
+    <ClCompile Include="reducedStVKForceModel.cpp" />
+    <ClCompile Include="reducedStVKForceModelWithHessian.cpp" />
+    <ClCompile Include="reducedSubspaceStVKForceModel.cpp" />
+    <ClCompile Include="renderSprings.cpp" />
+    <ClCompile Include="renderVolumetricMesh.cpp" />
+    <ClCompile Include="rigidBody.cpp" />
+    <ClCompile Include="rigidBody_generalTensor.cpp" />
+    <ClCompile Include="saveScreenShot.cpp" />
+    <ClCompile Include="sceneObject.cpp" />
+    <ClCompile Include="sceneObject6DOF.cpp" />
+    <ClCompile Include="sceneObjectDeformable.cpp" />
+    <ClCompile Include="sceneObjectDeformable6DOF.cpp" />
+    <ClCompile Include="sceneObjectDeformableGPU.cpp" />
+    <ClCompile Include="sceneObjectDeformableGPU6DOF.cpp" />
+    <ClCompile Include="sceneObjectReduced.cpp" />
+    <ClCompile Include="sceneObjectReduced6DOF.cpp" />
+    <ClCompile Include="sceneObjectReducedCPU.cpp" />
+    <ClCompile Include="sceneObjectReducedCPU6DOF.cpp" />
+    <ClCompile Include="sceneObjectReducedGPU.cpp" />
+    <ClCompile Include="sceneObjectReducedGPU6DOF.cpp" />
+    <ClCompile Include="sceneObjectWithRestPosition.cpp" />
+    <ClCompile Include="simpleSphere.cpp" />
+    <ClCompile Include="sparseMatrix.cpp" />
+    <ClCompile Include="sparseMatrixMT.cpp" />
+    <ClCompile Include="SPOOLESSolver.cpp" />
+    <ClCompile Include="SPOOLESSolverMT.cpp" />
+    <ClCompile Include="StVKCubeABCD.cpp" />
+    <ClCompile Include="StVKElementABCD.cpp" />
+    <ClCompile Include="StVKElementABCDLoader.cpp" />
+    <ClCompile Include="StVKForceModel.cpp" />
+    <ClCompile Include="StVKHessianTensor.cpp" />
+    <ClCompile Include="StVKInternalForces.cpp" />
+    <ClCompile Include="StVKInternalForcesMT.cpp" />
+    <ClCompile Include="StVKIsotropicMaterial.cpp" />
+    <ClCompile Include="StVKReducedHessianTensor.cpp" />
+    <ClCompile Include="StVKReducedInternalForces.cpp" />
+    <ClCompile Include="StVKReducedInternalForcesMT.cpp" />
+    <ClCompile Include="StVKReducedInternalForcesMultiLoad.cpp" />
+    <ClCompile Include="StVKReducedStiffnessMatrix.cpp" />
+    <ClCompile Include="StVKStiffnessMatrix.cpp" />
+    <ClCompile Include="StVKStiffnessMatrixMT.cpp" />
+    <ClCompile Include="StVKTetABCD.cpp" />
+    <ClCompile Include="StVKTetHighMemoryABCD.cpp" />
+    <ClCompile Include="tetMesh.cpp" />
+    <ClCompile Include="triangle.cpp" />
+    <ClCompile Include="tribox3.cpp" />
+    <ClCompile Include="uUq-shaders.cpp" />
+    <ClCompile Include="vbo.cpp" />
+    <ClCompile Include="vec2d.cpp" />
+    <ClCompile Include="vec3d.cpp" />
+    <ClCompile Include="volumetricMesh.cpp" />
+    <ClCompile Include="volumetricMeshDeformationGradient.cpp" />
+    <ClCompile Include="volumetricMeshENuMaterial.cpp" />
+    <ClCompile Include="volumetricMeshExtensions.cpp" />
+    <ClCompile Include="volumetricMeshLoader.cpp" />
+    <ClCompile Include="volumetricMeshMooneyRivlinMaterial.cpp" />
+    <ClCompile Include="volumetricMeshOrthotropicMaterial.cpp" />
+    <ClCompile Include="volumetricMeshParser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="boundingBox.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="centralDifferencesDense.h" />
+    <ClInclude Include="centralDifferencesSparse.h" />
+    <ClInclude Include="CGSolver.h" />
+    <ClInclude Include="clothBW.h" />
+    <ClInclude Include="clothBWForceModel.h" />
+    <ClInclude Include="clothBWFromObjMesh.h" />
+    <ClInclude Include="clothBWMT.h" />
+    <ClInclude Include="computeStiffnessMatrixNullspace.h" />
+    <ClInclude Include="configFile.h" />
+    <ClInclude Include="corotationalLinearFEM.h" />
+    <ClInclude Include="corotationalLinearFEMForceModel.h" />
+    <ClInclude Include="corotationalLinearFEMMT.h" />
+    <ClInclude Include="cubicMesh.h" />
+    <ClInclude Include="eig3.h" />
+    <ClInclude Include="eulerSparse.h" />
+    <ClInclude Include="expokit_xgpadm.h" />
+    <ClInclude Include="forceModel.h" />
+    <ClInclude Include="generateInterpolationMatrix.h" />
+    <ClInclude Include="generateMassMatrix.h" />
+    <ClInclude Include="generateMeshGraph.h" />
+    <ClInclude Include="generateSurfaceMesh.h" />
+    <ClInclude Include="getIntegratorSolver.h" />
+    <ClInclude Include="getopts.h" />
+    <ClInclude Include="glh_extensions.h" />
+    <ClInclude Include="glh_genext.h" />
+    <ClInclude Include="glslPhong.h" />
+    <ClInclude Include="glui.h" />
+    <ClInclude Include="glut-header.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="hashTable.h" />
+    <ClInclude Include="homogeneousMooneyRivlinIsotropicMaterial.h" />
+    <ClInclude Include="homogeneousNeoHookeanIsotropicMaterial.h" />
+    <ClInclude Include="homogeneousStVKIsotropicMaterial.h" />
+    <ClInclude Include="imageFormats.h" />
+    <ClInclude Include="imageIO.h" />
+    <ClInclude Include="implicitBackwardEulerDense.h" />
+    <ClInclude Include="implicitBackwardEulerSparse.h" />
+    <ClInclude Include="implicitNewmarkDense.h" />
+    <ClInclude Include="implicitNewmarkDenseMulti1D.h" />
+    <ClInclude Include="implicitNewmarkSparse.h" />
+    <ClInclude Include="initGraphics.h" />
+    <ClInclude Include="insertRows.h" />
+    <ClInclude Include="integratorBase.h" />
+    <ClInclude Include="integratorBaseDense.h" />
+    <ClInclude Include="integratorBaseSparse.h" />
+    <ClInclude Include="integratorMulti1D.h" />
+    <ClInclude Include="integratorSolverSelection.h" />
+    <ClInclude Include="interpolationWeightsMultiLoad.h" />
+    <ClInclude Include="invMKSolver.h" />
+    <ClInclude Include="IPIVC.h" />
+    <ClInclude Include="isotropicHyperelasticFEM.h" />
+    <ClInclude Include="isotropicHyperelasticFEMForceModel.h" />
+    <ClInclude Include="isotropicHyperelasticFEMMT.h" />
+    <ClInclude Include="isotropicMaterial.h" />
+    <ClInclude Include="isotropicMaterialWithCompressionResistance.h" />
+    <ClInclude Include="lapack-headers.h" />
+    <ClInclude Include="lighting.h" />
+    <ClInclude Include="linearFEMForceModel.h" />
+    <ClInclude Include="linearSolver.h" />
+    <ClInclude Include="loadList.h" />
+    <ClInclude Include="macros.h" />
+    <ClInclude Include="massSpringSystem.h" />
+    <ClInclude Include="massSpringSystemForceModel.h" />
+    <ClInclude Include="massSpringSystemFromCubicMesh.h" />
+    <ClInclude Include="massSpringSystemFromCubicMeshConfigFile.h" />
+    <ClInclude Include="massSpringSystemFromObjMesh.h" />
+    <ClInclude Include="massSpringSystemFromObjMeshConfigFile.h" />
+    <ClInclude Include="massSpringSystemFromTetMesh.h" />
+    <ClInclude Include="massSpringSystemFromTetMeshConfigFile.h" />
+    <ClInclude Include="massSpringSystemMT.h" />
+    <ClInclude Include="mat3d.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="matrixBLAS.h" />
+    <ClInclude Include="matrixExp.h" />
+    <ClInclude Include="matrixIO.h" />
+    <ClInclude Include="matrixLAPACK.h" />
+    <ClInclude Include="matrixMacros.h" />
+    <ClInclude Include="matrixMultiplyMacros.h" />
+    <ClInclude Include="matrixPCA.h" />
+    <ClInclude Include="matrixProjection.h" />
+    <ClInclude Include="minivector.h" />
+    <ClInclude Include="modalMatrix.h" />
+    <ClInclude Include="MooneyRivlinIsotropicMaterial.h" />
+    <ClInclude Include="multiMatrixIO.h" />
+    <ClInclude Include="neoHookeanIsotropicMaterial.h" />
+    <ClInclude Include="objMesh-disjointSet.h" />
+    <ClInclude Include="objMesh.h" />
+    <ClInclude Include="objMeshBinaryLoader.h" />
+    <ClInclude Include="objMeshClose.h" />
+    <ClInclude Include="objMeshEncode.h" />
+    <ClInclude Include="objMeshGPUDeformer.h" />
+    <ClInclude Include="objMeshGPUDeformer_coarseToFine.h" />
+    <ClInclude Include="objMeshGPUDeformer_coarseToFine_fbo.h" />
+    <ClInclude Include="objMeshGPUDeformer_uUq.h" />
+    <ClInclude Include="objMeshGPUDeformer_uUq_fbo.h" />
+    <ClInclude Include="objMeshGPUDeformer_uUq_pbuffer.h" />
+    <ClInclude Include="objMeshGPUDeformer_uUq_setLighting.h" />
+    <ClInclude Include="objMeshGraph.h" />
+    <ClInclude Include="objMeshOctree.h" />
+    <ClInclude Include="objMeshOffsetVoxels.h" />
+    <ClInclude Include="objMeshOrientable.h" />
+    <ClInclude Include="objMeshRender.h" />
+    <ClInclude Include="octree.h" />
+    <ClInclude Include="openGL-headers.h" />
+    <ClInclude Include="openGLHelper.h" />
+    <ClInclude Include="PardisoSolver.h" />
+    <ClInclude Include="performanceCounter.h" />
+    <ClInclude Include="polarDecomposition.h" />
+    <ClInclude Include="polarDecompositionGradient.h" />
+    <ClInclude Include="ppm.h" />
+    <ClInclude Include="printBitmap.h" />
+    <ClInclude Include="quaternion.h" />
+    <ClInclude Include="reducedForceModel.h" />
+    <ClInclude Include="reducedForceModelWithHessian.h" />
+    <ClInclude Include="reducedLinearForceModel.h" />
+    <ClInclude Include="reducedLinearStVKForceModel.h" />
+    <ClInclude Include="reducedMassSpringSystemForceModel.h" />
+    <ClInclude Include="reducedMassSpringSystemForceModelWithHessian.h" />
+    <ClInclude Include="reducedSpringForceModel.h" />
+    <ClInclude Include="reducedStVKForceModel.h" />
+    <ClInclude Include="reducedStVKForceModelWithHessian.h" />
+    <ClInclude Include="reducedSubspaceStVKForceModel.h" />
+    <ClInclude Include="renderSprings.h" />
+    <ClInclude Include="renderVolumetricMesh.h" />
+    <ClInclude Include="rigidBody.h" />
+    <ClInclude Include="rigidBody_generalTensor.h" />
+    <ClInclude Include="saveScreenShot.h" />
+    <ClInclude Include="sceneObject.h" />
+    <ClInclude Include="sceneObject6DOF.h" />
+    <ClInclude Include="sceneObjectDeformable.h" />
+    <ClInclude Include="sceneObjectDeformable6DOF.h" />
+    <ClInclude Include="sceneObjectDeformableGPU.h" />
+    <ClInclude Include="sceneObjectDeformableGPU6DOF.h" />
+    <ClInclude Include="sceneObjectReduced.h" />
+    <ClInclude Include="sceneObjectReduced6DOF.h" />
+    <ClInclude Include="sceneObjectReducedCPU.h" />
+    <ClInclude Include="sceneObjectReducedCPU6DOF.h" />
+    <ClInclude Include="sceneObjectReducedGPU.h" />
+    <ClInclude Include="sceneObjectReducedGPU6DOF.h" />
+    <ClInclude Include="sceneObjectWithRestPosition.h" />
+    <ClInclude Include="simpleSphere.h" />
+    <ClInclude Include="sparseMatrix.h" />
+    <ClInclude Include="sparseMatrixMT.h" />
+    <ClInclude Include="sparseSolverAvailability.h" />
+    <ClInclude Include="sparseSolvers.h" />
+    <ClInclude Include="SPOOLESSolver.h" />
+    <ClInclude Include="SPOOLESSolverMT.h" />
+    <ClInclude Include="StVKCubeABCD.h" />
+    <ClInclude Include="StVKElementABCD.h" />
+    <ClInclude Include="StVKElementABCDLoader.h" />
+    <ClInclude Include="StVKForceModel.h" />
+    <ClInclude Include="StVKHessianTensor.h" />
+    <ClInclude Include="StVKInternalForces.h" />
+    <ClInclude Include="StVKInternalForcesMT.h" />
+    <ClInclude Include="StVKIsotropicMaterial.h" />
+    <ClInclude Include="StVKReducedHessianTensor.h" />
+    <ClInclude Include="StVKReducedInternalForces.h" />
+    <ClInclude Include="StVKReducedInternalForcesMT.h" />
+    <ClInclude Include="StVKReducedInternalForcesMultiLoad.h" />
+    <ClInclude Include="StVKReducedStiffnessMatrix.h" />
+    <ClInclude Include="StVKStiffnessMatrix.h" />
+    <ClInclude Include="StVKStiffnessMatrixMT.h" />
+    <ClInclude Include="StVKTetABCD.h" />
+    <ClInclude Include="StVKTetHighMemoryABCD.h" />
+    <ClInclude Include="tetMesh.h" />
+    <ClInclude Include="triangle.h" />
+    <ClInclude Include="tribox3.h" />
+    <ClInclude Include="triple.h" />
+    <ClInclude Include="vbo.h" />
+    <ClInclude Include="vec2d.h" />
+    <ClInclude Include="vec3d.h" />
+    <ClInclude Include="vegalong.h" />
+    <ClInclude Include="volumetricMesh.h" />
+    <ClInclude Include="volumetricMeshDeformationGradient.h" />
+    <ClInclude Include="volumetricMeshENuMaterial.h" />
+    <ClInclude Include="volumetricMeshExtensions.h" />
+    <ClInclude Include="volumetricMeshLoader.h" />
+    <ClInclude Include="volumetricMeshMooneyRivlinMaterial.h" />
+    <ClInclude Include="volumetricMeshOrthotropicMaterial.h" />
+    <ClInclude Include="volumetricMeshParser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\examples\turtle\turtle.config" />
+    <None Include="homogeneousMooneyRivlinIsotropicMaterial.o" />
+    <None Include="homogeneousNeoHookeanIsotropicMaterial.o" />
+    <None Include="homogeneousStVKIsotropicMaterial.o" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.targets" />
+  </ImportGroup>
+</Project>

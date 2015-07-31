@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CG_DIR>C:\Program Files (x86)\NVIDIA Corporation\Cg</CG_DIR>
+    <INTEL_DIR>D:\program files (x86)\intel\Composer XE 2015</INTEL_DIR>
+    <CUDA65_SAMPLES>D:\cuda6.5\samples\common</CUDA65_SAMPLES>
+    <CUDA_TOOLKIT>D:\cuda6.5\toolkit</CUDA_TOOLKIT>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(CG_DIR)\include;$(INTEL_DIR)\mkl\include;$(CUDA_TOOLKIT)\include;$(CUDA65_SAMPLES)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>../lib;$(CUDA_TOOLKIT)\lib\x64;$(LibraryPath)</LibraryPath>
+    <_PropertySheetDisplayName>common</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <CudaToolkitCustomDir>$(CUDA_TOOLKIT)</CudaToolkitCustomDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>cudart.lib;cg.lib;cgGL.lib;expokit.lib;libm.lib;cublas.lib;mkl_intel_thread.lib;cusparse.lib;mkl_core.lib;libiomp5md.lib;cusolver.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+    <CudaCompile>
+      <AdditionalDeps>%(AdditionalDeps)</AdditionalDeps>
+    </CudaCompile>
+    <CudaCompile>
+      <Include>$(CUDA65_SAMPLES)\inc;$(CUDA_TOOLKIT)\include;%(Include)</Include>
+    </CudaCompile>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CodeGeneration>compute_20,sm_20;%(CodeGeneration)</CodeGeneration>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+    </CudaCompile>
+    <CudaLink>
+      <AdditionalLibraryDirectories>$(CUDA_TOOLKIT)\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </CudaLink>
+    <ClCompile>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>Full</Optimization>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="CG_DIR">
+      <Value>$(CG_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="INTEL_DIR">
+      <Value>$(INTEL_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CUDA65_SAMPLES">
+      <Value>$(CUDA65_SAMPLES)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="CUDA_TOOLKIT">
+      <Value>$(CUDA_TOOLKIT)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
